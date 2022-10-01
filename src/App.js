@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, Spinner, ToastContainer } from 'react-bootstrap';
+import GridCards from './components/GridCards/GridCards';
+import NavBar from './components/NavBar/NavBar';
+import ToastBtn from './components/Toast/ToastBtn';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <br /><br />
+      <Button variant='danger'>My Button</Button>
+      <Spinner animation="grow" variant="success" />
+      <ToastBtn></ToastBtn>
+      <br />
+      <br />
+      <GridCards></GridCards>
+      
     </div>
   );
 }
